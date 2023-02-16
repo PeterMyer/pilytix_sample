@@ -36,16 +36,16 @@ export default function ProbabilityHistoryChart({probabilityHistory}){
             }),
             datasets: [{
                 id:1,
-                label: "Pilytix Prob",
+                label: "Pilytix Prob %",
                 data: probabilityHistory.map((probObject)=>{
-                    return probObject.pilytixProb
+                    return (probObject.pilytixProb * 100 )
                 })
                 },  
                 {
                 id:2,
-                label: "Rep Prob",
+                label: "Rep Prob %",
                 data: probabilityHistory.map((probObject)=>{
-                    return probObject.repProb
+                    return (probObject.repProb * 100 )
                 }),
                 }
             ]

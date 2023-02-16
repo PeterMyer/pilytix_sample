@@ -160,6 +160,18 @@ html {
   flex-direction: row;
 }
 
+.factors-list-item-text{
+  display: flex;
+  flex-direction: row;
+}
+
+.css-1betqn-MuiAccordionSummary-content{
+  margin: 0!important
+}
+.css-vhnqje-MuiButtonBase-root-MuiAccordionSummary-root{
+  min-height:0!important
+}
+
 @media (max-width: 900px) {
   .modal-content {
     width: 65%;

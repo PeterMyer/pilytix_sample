@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import { formatter } from '../Utils/currencyFormatter';
 import getComparator from './Utils/getComparator'
 import Modal from '../Modal/Modal'
+import Rating from '@mui/material/Rating';
+
 
 export default function BasicTable({opportunities}) {
   /**
@@ -121,7 +123,8 @@ export default function BasicTable({opportunities}) {
                     align = "left" 
                     sx = {{ "padding-right":0 }}>
                     <Typography variant = "body2">
-                      {row.pilytixTier}
+                    <Rating sx={{'& .MuiRating-iconFilled': {
+            color: '#6ECFB1'}}} name="read-only" value={row.pilytixTier.slice(0,1)}readOnly />
                     </Typography>
                   </TableCell>
                   <TableCell 

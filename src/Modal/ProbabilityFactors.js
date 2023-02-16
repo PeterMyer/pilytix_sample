@@ -1,6 +1,8 @@
 import Typography from '@mui/material/Typography';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { Accordion,AccordionDetails,AccordionSummary } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function ProbabilityFactors({opportunity}){
     const positiveFactors = opportunity.pilytixFactorsIncreasingWin? opportunity.pilytixFactorsIncreasingWin: []
@@ -16,16 +18,35 @@ export default function ProbabilityFactors({opportunity}){
                     return(
                         <li className = "factors-list-item">
                             <ArrowUpwardIcon sx = {{color:"green"}}/>
-                            <div className = "factors-list-item-text">
-                            <Typography 
-                                variant = "subtitle2" 
-                                sx = {{paddingRight:"5px"}}>
-                                    {factor.name}:
-                            </Typography>
-                            <Typography variant = "body2">
-                                {factor.message}
-                            </Typography>
-                            </div>
+                            <Accordion 
+                                disableGutters={"true"}
+                                margin="0"
+                                sx={{borders:"none", boxShadow:"none"}}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                                margin="0!"
+                                sx={{padding:"none"}}
+                            >
+                                <div className = "factors-list-item-text">
+                                    <Typography 
+                                        variant = "subtitle2" 
+                                        sx = {{paddingRight:"5px"}}
+                                    >
+                                        {factor.name}:
+                                    </Typography>
+                                    <Typography variant = "body2">
+                                        {factor.message}
+                                    </Typography>
+                                </div>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{ margin:"none", padding:"none"}}>
+                                <Typography variant = "caption">
+                                {factor.weight.description}
+                                </Typography>
+                            </AccordionDetails>
+                            </Accordion>
                         </li>
                     )
                 })}
@@ -38,14 +59,35 @@ export default function ProbabilityFactors({opportunity}){
                     return(
                     <li className = "factors-list-item">
                         <ArrowDownwardIcon sx = {{color:"darkred"}}/>
-                        <div className = "factors-list-item-text">
-                        <Typography variant = "subtitle2" sx = {{paddingRight:"5px"}}>
-                            {factor.name}:
-                        </Typography>
-                        <Typography variant="body2">
-                            {factor.message}
-                        </Typography>
-                        </div>
+                        <Accordion 
+                                disableGutters={"true"}
+                                margin="0"
+                                sx={{borders:"none", boxShadow:"none"}}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                                margin="0!"
+                                sx={{padding:"none"}}
+                            >
+                                <div className = "factors-list-item-text">
+                                    <Typography 
+                                        variant = "subtitle2" 
+                                        sx = {{paddingRight:"5px"}}
+                                    >
+                                        {factor.name}:
+                                    </Typography>
+                                    <Typography variant = "body2">
+                                        {factor.message}
+                                    </Typography>
+                                </div>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{ margin:"none", padding:"none"}}>
+                                <Typography variant = "caption">
+                                {factor.weight.description}
+                                </Typography>
+                            </AccordionDetails>
+                            </Accordion>
                     </li>)
                 })}
             </ul>
