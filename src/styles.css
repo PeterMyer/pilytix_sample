@@ -2,3 +2,317 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+html {
+  background-color: rgb(223, 231, 239);
+}
+
+.modal{
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.5);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 70%;
+  height: 85%;
+  background-color: #fff;
+  overflow-y: auto
+}
+
+.modal-header{
+  display: flex;
+  flex-direction: column;
+  background-color: #4779D1;
+  color: white
+}
+
+.navigation-button-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-left: 20px;
+  padding-right:20px;
+  padding-top:20px;
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+
+.navigation-button-container button{
+    all: unset;
+    cursor: pointer;
+}
+
+#company-name-container{
+  padding-left: 20px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+#modal-body-header{
+  padding-top:5px;
+}
+
+.modal-body-section{
+  display:flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  width:100%
+}
+
+.modal-body-subsection{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.modal-body-subsection-container{
+  display:flex;
+  flex-direction: row;
+  padding-right:20px;
+}
+
+.modal-body-subsection-item-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 20px
+}
+
+.modal-body-subsection-item{
+  display:flex;
+  flex-direction: row;
+  padding-right: 50px
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+
+}
+
+.win-score-factor-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-modal-content-container{
+  display:flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.tab{
+  display: flex;
+  flex-direction: row;
+  border-top:1px solid #ccc; 
+  border-bottom: 1px solid #ccc; 
+  width:100%;
+  height: 100%;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 15px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button:active {
+  background-color: #ccc;
+}
+
+.tabcontent{
+  padding-left: 20px;
+  height:100%;
+  overflow-y: scroll
+
+}
+
+#probability-chart-container{
+  width:100%;
+  height:350px;
+  overflow-y: scroll
+}
+
+.factors-list-item{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 900px) {
+  .modal-content {
+    width: 65%;
+    height: 80%;
+    background-color: #fff;
+  }
+  .modal-body{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #modal-body-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #probability-chart-container{
+    overflow-y: scroll
+  }
+
+  .tab-modal-content-container{
+    display:flex;
+    flex-direction: column;
+    width: 100%
+  }
+
+  #probability-chart-container{
+    width:100%;
+    height:275px;
+    overflow-y: scroll
+  }
+  .modal-body-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right:10px;
+  }
+
+  .modal-body-subsection-container{
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .modal-body-subsection{
+    display:flex;
+    width:50%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modal-body-subsection-item{
+    display:flex;
+    flex-direction: row;
+    padding-right: 0px
+  }
+
+  .modal-body-subsection-item-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tabcontent{
+    height:100%;
+    overflow-y: scroll
+  }
+
+  #factors-list{
+    padding-left: 0;
+  }
+
+  .factors-list-item-text{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-content {
+    width: 65%;
+    height: 80%;
+    background-color: #fff;
+  }
+  .modal-body{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #modal-body-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  #probability-chart-container{
+    overflow-y: scroll
+  }
+
+  .tab-modal-content-container{
+    display:flex;
+    flex-direction: column;
+    width: 100%
+  }
+
+  #probability-chart-container{
+    width:100%;
+    height:275px;
+    overflow-y: scroll
+  }
+  .modal-body-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:100%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right:10px;
+  }
+
+  .modal-body-subsection-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modal-body-subsection{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modal-body-subsection-item{
+    display:flex;
+    flex-direction: row;
+    padding-right: 0px
+  }
+
+  .modal-body-subsection-item-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+
+  .tabcontent{
+    height:100%;
+    overflow-y: scroll
+  }
+}
