@@ -26,6 +26,7 @@ export default function Modal(props){
     }
 
     const handleKeyDown = (event) => {
+        event.preventDefault()
         if( event.key === "ArrowLeft" ){
             let button = document.getElementById("backArrowButton")
             button ? button.click(): alert('No Back button. This is the first item in the list.')
